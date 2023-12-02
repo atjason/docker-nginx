@@ -1,4 +1,4 @@
-www/*
+www/*/*
 !www/log/PLACE_HOLDER
 
 ssl/*
@@ -9,4 +9,3 @@ nginx/conf.d/*
 
 *.swp
 *.swo
-
