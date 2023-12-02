@@ -1,0 +1,12 @@
+www/*
+!www/log/PALCE
+
+ssl/*
+!ssl/PLACE
+
+nginx/conf.d/*
+!nginf/conf.d/conf.demo
+
+*.swp
+*.swo
+
