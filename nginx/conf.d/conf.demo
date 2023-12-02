@@ -26,14 +26,6 @@ server {
         index  index.html index.htm;
     }
 
-    location ~ .*\.(gif|jpg|jpeg|png|bmp|swf)$ {
-        expires      30d;
-    }
-
-    location ~ .*\.(js|css)?$ {
-        expires      12h;
-    }
-
     location ~ /\. {
         deny all;
     }
