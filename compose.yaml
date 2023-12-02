@@ -14,12 +14,15 @@ services:
       - ./ssl/:/etc/letsencrypt/:ro
       - ./www/:/home/www/:ro
       - ./www/log/:/home/www/log/:rw
-        #- ./www/hz.fenj.vip/public:/home/www/hz.fenj.vip/public:ro
-        #- ./www/hz.fenj.vip/.well-known:/home/www/hz.fenj.vip/.well-known:ro
+      # NOTE In fact only the following two folders used.
+      # Add whole folder of `./www` is for convenience when adding a new site.
+      #- ./www/demo.com/public:/home/www/demo.com/public:ro
+      #- ./www/demo.com/.well-known:/home/www/demo.com/.well-known:ro
 
   certbot:
     image: certbot/certbot:latest
     volumes:
       - ./ssl/:/etc/letsencrypt/:rw
       - ./www/:/home/www/:rw
-        #- ./www/hz.fenj.vip/.well-known:/home/www/hz.fenj.vip/.well-known:rw
+      # NOTE Similar with `volumes` in `nginx`.
+      #- ./www/demo.com/.well-known:/home/www/demo.com/.well-known:rw

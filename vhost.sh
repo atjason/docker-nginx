@@ -34,4 +34,3 @@ fi
 
 cd $dir
 ./reload-nginx.sh
-
