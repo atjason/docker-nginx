@@ -22,7 +22,7 @@ server {
     ssl_certificate_key /etc/letsencrypt/live/demo.com/privkey.pem;
 
     location / {
-        root   /home/www/$host/public;
+        root   /home/www/demo.com/public;
         index  index.html index.htm;
     }
 
