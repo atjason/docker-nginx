@@ -4,3 +4,7 @@
 
 sudo docker compose run --rm certbot renew
 
+# run this script via crontab
+#sudo crontab -e
+#0 3 * * 1 cd /home/jason/site; bash -x reload-nginx.sh
+
