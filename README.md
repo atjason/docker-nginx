@@ -1,4 +1,4 @@
-This project is to run nginx via Docker, with ssl/Let's Encrypt.
+This project is to run nginx via Docker, support https/ssl via Let's Encrypt.
 
 # How to Use
 
