@@ -1,0 +1,45 @@
+server {
+    listen       80;
+    server_name  demo.com;
+
+    location ~ /.well-known/acme-challenge {
+        root   /home/www/demo.com;
+    }
+
+    location / {
+        return 301 https://$host$request_uri;
+    }
+
+    #access_log off;
+}
+
+server {
+    listen       443 ssl;
+    server_name  demo.com;
+    http2 on;
+
+    ssl_certificate /etc/letsencrypt/live/demo.com/fullchain.pem;
+    ssl_certificate_key /etc/letsencrypt/live/demo.com/privkey.pem;
+
+    location / {
+        root   /home/www/$host/public;
+        index  index.html index.htm;
+    }
+
+    location ~ .*\.(gif|jpg|jpeg|png|bmp|swf)$ {
+        expires      30d;
+    }
+
+    location ~ .*\.(js|css)?$ {
+        expires      12h;
+    }
+
+    location ~ /\. {
+        deny all;
+    }
+
+    #access_log off;
+    access_log /home/www/log/demo.com.log;
+    error_log /home/www/log/demo.com.log;
+}
+
