@@ -1,5 +1,7 @@
 This project is to run nginx via Docker, support https/ssl via Let's Encrypt.
 
+[中文文档](./README_cn.md)
+
 # How to Use
 
 - Clone this project.
