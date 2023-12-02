@@ -1,8 +1,8 @@
 www/*
-!www/log/PALCE
+!www/log/PLACE_HOLDER
 
 ssl/*
-!ssl/PLACE
+!ssl/PLACE_HOLDER
 
 nginx/conf.d/*
 !nginx/conf.d/conf.demo
